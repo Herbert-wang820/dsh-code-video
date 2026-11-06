@@ -1,0 +1,64 @@
+{
+  "name": "dsh-code-video",
+  "version": "0.1.0",
+  "description": "DeepSeek Harness plugin that ships the promo-video-maker skill: research, style frames, 4K screenshots, beat-synced music, AI voiceover, mixing and automatic gates, rendered to a 4K promo video with Remotion.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Herbert-wang820",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Herbert-wang820/dsh-code-video.git"
+  },
+  "homepage": "https://github.com/Herbert-wang820/dsh-code-video#readme",
+  "bugs": {
+    "url": "https://github.com/Herbert-wang820/dsh-code-video/issues"
+  },
+  "main": "lib/index.js",
+  "types": "lib/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "AGENTS.md",
+    "SKILL.md",
+    "CLAUDE.md",
+    "references",
+    "template",
+    "docs",
+    "README.md",
+    "README.zh.md",
+    "LICENSE",
+    "NOTICE",
+    ".env.example"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "dsh": ">=0.2.0-0 <0.3.0-0"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "check": "npm test"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "skill",
+    "promo-video",
+    "product-video",
+    "remotion",
+    "video"
+  ]
+}

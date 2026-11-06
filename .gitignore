@@ -1,0 +1,11 @@
+node_modules
+*.tgz
+.DS_Store
+outputs
+template/out
+template/public/fonts/*.woff2
+template/public/audio/*.wav
+!template/public/fonts/.gitkeep
+!template/public/audio/.gitkeep
+__pycache__
+*.pyc

@@ -1,0 +1,9 @@
+# Bundle layer applied when this package is listed in dsh.profile.bundles
+# (the plugin manager adds it automatically after `dsh plugin ... add`).
+#
+# One loader row: the plugin registers the `promo-video-maker` skill into
+# ctx.skills. No config is required; disable the row from the host's plugin
+# page if you would rather supply the same skill from ~/.dsh/skills.
+- insert:
+    - id: code-video
+      name: dsh-code-video

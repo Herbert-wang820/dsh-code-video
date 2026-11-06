@@ -1,0 +1,33 @@
+dsh-code-video
+Copyright (c) 2026 Herbert-wang820
+
+This package is a DeepSeek Harness plugin wrapper around the "promo-video-maker"
+project by 程序员鱼皮 (liyupi):
+
+    https://github.com/liyupi/ai-promo-video-maker
+    MIT License, Copyright (c) 2026 程序员鱼皮 (liyupi)
+
+Files copied from upstream, unmodified:
+
+    AGENTS.md, SKILL.md, CLAUDE.md, .env.example, LICENSE
+    references/               (all 8 handbooks)
+    template/                 (Remotion project, web player, Python scripts)
+    docs/images/case-*.jpg, docs/images/styles-*.jpg
+
+Modifications made by this repository:
+
+    - Added the DSH plugin layer that upstream does not have:
+      package.json (name, exports, dsh.bundle.patch, engines), cordis.patch.yml,
+      lib/index.js (composes the skill body and registers it via ctx.skills),
+      lib/types/index.d.ts, test/plugin.test.mjs, and the README pair.
+    - Wrote the plugin-specific preamble prepended to AGENTS.md: it resolves
+      <工具目录>/<输出目录> to absolute paths and documents how plugin usage
+      differs from the clone-style usage.
+    - Removed upstream's outputs/ directory (it only held a .gitkeep) and its
+      README (replaced by this plugin's README.md / README.zh.md).
+    - Removed docs/images/showcase.gif (5.4 MB) to keep the plugin tarball small;
+      the READMEs use static stills instead.
+
+The upstream MIT license text is retained verbatim in LICENSE.
+The upstream project is the work that makes any of this useful; this repository
+only changes how it is installed and discovered.
